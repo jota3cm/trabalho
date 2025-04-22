@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - João Pedro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>Contato</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="currículo.html">Currículo</a></li>
+          <li><a href="github.html">Projetos</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container contact">
+    <section class="contact-form">
+      <h2>Formulário de Contato</h2>
+      <form id="contactForm" action="#" method="POST">
+        <div class="form-group">
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" pattern="[0-9]{11}" placeholder="Ex: 27999999999">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label>Tipo de Cliente:</label>
+          <div class="radio-group">
+            <input type="radio" id="pessoa-fisica" name="tipo" value="pessoa física" checked>
+            <label for="pessoa-fisica">Pessoa Física</label>
+            
+            <input type="radio" id="pessoa-juridica" name="tipo" value="pessoa jurídica">
+            <label for="pessoa-juridica">Pessoa Jurídica</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="horario">Melhor horário de contato:</label>
+          <select id="horario" name="horario">
+            <option value="manha">Manhã (8h-12h)</option>
+            <option value="tarde">Tarde (13h-18h)</option>
+            <option value="noite">Noite (18h-22h)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Tipo de serviço desejado:</label>
+          <div class="checkbox-group">
+            <input type="checkbox" id="estatico" name="servico" value="Estático">
+            <label for="estatico">Estático</label>
+            
+            <input type="checkbox" id="dinamico" name="servico" value="Dinâmico">
+            <label for="dinamico">Dinâmico</label>
+            
+            <input type="checkbox" id="avancado" name="servico" value="Avançado">
+            <label for="avancado">Avançado</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="descricao">Descrição do projeto:</label>
+          <textarea id="descricao" name="descricao" rows="6" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Enviar Mensagem</button>
+      </form>
+    </section>
+
+    <section class="contact-info">
+      <h2>Outras Formas de Contato</h2>
+      <ul class="contact-methods">
+        <li><strong>Email:</strong> joao.pedro@exemplo.com</li>
+        <li><strong>Telefone:</strong> (27) 99999-9999</li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/jota3cm" target="_blank">github.com/jota3cm</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 João Pedro Demoner Bessa Bermond</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Obrigado por entrar em contato! Responderei em breve.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
